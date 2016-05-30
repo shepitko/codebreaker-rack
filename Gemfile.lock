@@ -1,0 +1,20 @@
+GIT
+  remote: git://github.com/shepitko/codebreaker.git
+  revision: 3c6995054d4520d5d87360607c3c9a3fc8864e30
+  branch: sketch
+  specs:
+    codebreaker (0.1.0)
+
+GEM
+  specs:
+    rack (1.6.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  codebreaker!
+  rack
+
+BUNDLED WITH
+   1.12.3
