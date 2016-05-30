@@ -6,6 +6,7 @@ GIT
     codebreaker (0.1.0)
 
 GEM
+  remote: https://rubygems.org/
   specs:
     rack (1.6.4)
 
