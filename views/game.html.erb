@@ -1,0 +1,31 @@
+
+<div class="card-panel grey darken-4 animated pulse">
+<div class="row">
+  <div class="col m6 i">
+    <h4>Game</h4>
+    <h5>Attempts: <span><%=mode%>\<%=attempt%></span></h5>
+    <h5>Hint: <span><%=hint%></span></h5>
+    <div class="input-field">
+      <form method="POST" action='guess'>
+        <label for="prefix">Attempt</label>
+        <input id="prefix" placeholder='enter 4 numbers, from 1 to 6' type="text" name='attempt' pattern="[1-6]{4}" class='validate' autofocus/>
+        <button type="submit" class="col m10 offset-m1 btn">check</button>
+      </form>
+    </div>
+  </div>
+  <div class="col m6">
+    <h4>Current Scores</h4>
+    <table class="bordered">
+      <th>Attempt</th>
+      <th>result</th>
+      <% unless curr_results.empty?%>
+        <% curr_results.each do |result|%>
+        <tr>
+          <td><%=result[:guess]%></td>
+          <td><%=result[:result]%></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+</div>

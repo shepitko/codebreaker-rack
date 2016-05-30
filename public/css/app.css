@@ -1,0 +1,17 @@
+body{
+  color: white
+}
+table, tr ,td{
+  margin:0;
+  padding:0;
+}
+td,h4{
+  color:#29b6f6;
+}
+
+.btn{
+  /*background-color: #29b6f6;*/
+}
+.finish{
+  display:inline-block;
+}

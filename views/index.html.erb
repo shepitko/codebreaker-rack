@@ -1,0 +1,87 @@
+<div class="card-panel grey darken-4 animated zoomInDown">
+  <h4 class="center">Welcome to Codebreaker!</h4>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header teal"><i class="material-icons">live_help</i>About game</div>
+      <div class="collapsible-body">
+        <p>
+        Codebreaker is a logic game in which a code-breaker tries to break a secret code created by a code-maker. The code-maker, which will be played by the application we're going to write, creates a secret code of four numbers between 1 and 6.<br><br>
+        The code-breaker then gets some number of chances to break the code. In each turn, the code-breaker makes a guess of four numbers. The code-maker then marks the guess with up to four + and - signs.<br><br>
+        A + indicates an exact match: one of the numbers in the guess is the same as one of the numbers in the secret code and in the same position.<br><br>
+        A - indicates a number match: one of the numbers in the guess is the same as one of the numbers in the secret code but in a different position.
+        </p>
+      </div>
+    </li>
+  </ul>
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header teal"><i class="material-icons">insert_chart</i>Scores</div>
+      <div class="collapsible-body">
+        <table class='centered bordered '>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Score</th>
+              <th>Name</th>
+              <th>use_hint</th>
+              <th>Numbers of attempts</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% unless scores.empty?%>
+            <% scores.each_with_index do |score, index|%>
+              <tr>
+                <td><%=index+1%></td>
+                <td><%=score[:score]%></td>
+                <td><%=score[:username]%></td>
+                <td><%=score[:hint] ? '+' : '-'%></td>
+                <td><%=score[:cnt]%></td>
+                <td><%=score[:date]%></td>
+              </tr>
+            <% end %>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+
+
+  <div class="divider"></div>
+    
+    <form action="settings" method="POST">
+      <div class="row">
+        <div class="col m4 center input-field">
+          <label for="username"><span class="cyan-text">promt your name:</span></label>
+          <input id="username" type="text" name="user" class="validate" required>
+        </div>
+        <div class="col m5 center">
+          <p class="cyan-text center">choice mode:</p>
+          <input class="with-gap" name="mode" type="radio" id="easy" value="easy"/>
+          <label for="easy">Easy</label>
+          <input class="with-gap"name="mode" type="radio" id="normal" value="normal"/>
+          <label for="normal">Normal</label>
+          <input class="with-gap" name="mode" type="radio" id="hard" value="hard"/>
+          <label for="hard">Hard</label><br>
+        </div>
+        <div class="col m3 center">
+          <p class="cyan-text center">use hint:</p>
+          <div class="switch">
+            <label>
+              no
+              <input type="checkbox" name="hint">
+              <span class="lever"></span>
+              yes
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" value="newgame" name="state" class="col m10 offset-m1 btn">Start Game</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+    

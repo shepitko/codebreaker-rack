@@ -1,0 +1,26 @@
+<table class='centered bordered '>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Score</th>
+        <th>Name</th>
+        <th>use_hint</th>
+        <th>Numbers of attempts</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% unless scores.empty?%>
+      <% scores.each_with_index do |score, index|%>
+        <tr>
+          <td><%=index+1%></td>
+          <td><%=score[:score]%></td>
+          <td><%=score[:username]%></td>
+          <td><%=score[:hint] ? '+' : '-'%></td>
+          <td><%=score[:cnt]%></td>
+          <td><%=score[:date]%></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>

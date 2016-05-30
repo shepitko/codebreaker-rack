@@ -1,0 +1,22 @@
+---
+:scores:
+- :username: lojiya
+  :cnt: 7
+  :hint: false
+  :date: 2016-05-29 23:20:25.499438510 +03:00
+  :score: 1300
+- :username: man
+  :cnt: 5
+  :hint: true
+  :date: 2016-05-30 00:13:31.432041049 +03:00
+  :score: 1400
+- :username: aulumbik
+  :cnt: 4
+  :hint: false
+  :date: 2016-05-30 00:17:53.533746952 +03:00
+  :score: 1600
+- :username: test
+  :cnt: 5
+  :hint: true
+  :date: 2016-05-30 10:40:43.847764011 +03:00
+  :score: 1400
