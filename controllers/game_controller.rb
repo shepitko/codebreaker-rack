@@ -61,6 +61,7 @@ class GameController < BaseController
         attempt: 0
       }
     end
+    p @@settings
     redirect_to('/game')
   end
 
