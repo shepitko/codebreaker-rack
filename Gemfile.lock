@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/shepitko/codebreaker.git
-  revision: 3c6995054d4520d5d87360607c3c9a3fc8864e30
+  revision: 51964991886d3575c6f2f1f2079a48a44cb93cb3
   branch: sketch
   specs:
     codebreaker (0.1.0)
